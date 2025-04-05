@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 252 95% 85%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 240 5.9% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 5.9% 18%;
+    --muted-foreground: 215 20.2% 75.1%;
+
+    --accent: 261 73% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 5.9% 25%;
+    --input: 240 5.9% 20%;
+    --ring: 252 95% 85%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 252 95% 85%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 240 5.9% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 240 5.9% 25%;
+    --sidebar-ring: 252 95% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}
+
+@layer components {
+  .code-block {
+    @apply font-mono bg-code text-code-foreground p-4 rounded-md;
+  }
+  
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-tech-blue to-tech-purple animate-gradient-x;
+  }
+  
+  .section-heading {
+    @apply text-2xl md:text-3xl font-bold mb-6 gradient-text;
+  }
+}
